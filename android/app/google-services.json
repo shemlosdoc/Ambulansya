@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "734016879912",
+    "project_id": "ambulansya-387903",
+    "storage_bucket": "ambulansya-387903.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734016879912:android:148766d50404d9e2ec641d",
+        "android_client_info": {
+          "package_name": "com.ambulansya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734016879912-9oa4u30jmkiu6s79249frh9jvucrv1r2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5PDR-w-0xS_ftUcugagoLMCnkZcpkOEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734016879912-9oa4u30jmkiu6s79249frh9jvucrv1r2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
