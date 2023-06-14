@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, Platform } from 'react-native';
+import { StyleSheet, View, Text, Platform, Image } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
+import ambulanceIcon from '../images/ambulanceIcon.png';
+import patient from '../images/patient.png';
 
 const GoogleMapScreen = () => {
   const [location, setLocation] = useState(null);
+  const [nearestHospitals, setNearestHospitals] = useState([]);
 
   useEffect(() => {
     requestLocationPermission();
@@ -61,13 +64,22 @@ const GoogleMapScreen = () => {
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: location.latitude,
-            longitude: location.longitude,
+            latitude: 10.232232962974857,
+            longitude: 123.77157021924658,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}
         >
-          <Marker coordinate={{ latitude: location.latitude, longitude: location.longitude }} />
+          <Marker
+	    coordinate={{ latitude: 10.232232962974857, longitude: 123.77157021924658 }}
+	  >
+	    <Image source={ambulanceIcon} style={styles.markerIcon} />
+	  </Marker>
+	  <Marker
+	    coordinate={{ latitude: 10.254827937534879, longitude: 123.81421036752832 }}
+	  >
+	    <Image source={patient} style={styles.markerIcon} />
+	  </Marker>
         </MapView>
       ) : (
         <Text>Loading Location...</Text>
@@ -87,6 +99,10 @@ const styles = StyleSheet.create({
     height: '100%',
     ...StyleSheet.absoluteFillObject,
   },
+  markerIcon: {
+    width: 32,
+    height: 32,
+},
 });
 
 export default GoogleMapScreen;
