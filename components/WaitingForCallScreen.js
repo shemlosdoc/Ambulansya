@@ -14,7 +14,15 @@ function WaitingForCallScreen() {
       <View style={styles.innerView}>
         <GoogleMapScreen />
         <View style={styles.eta}>
-          <Text style={styles.waitingSummonText}>Waiting For Summon</Text>
+          <Text style={{fontWeight: 'bold', fontSize: 20 }}>You have been summoned</Text>
+          <View style={{flexDirection: 'row'}}>
+            <TouchableOpacity style={styles.cancelButton} onPress={() => navigation.navigate('SummoningAmbulance')}>
+              <Text style={styles.buttonText}>Decline</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.confirmButton} onPress={() => navigation.navigate('ShowNearestAmbulance')}>
+              <Text style={styles.buttonText}>Accept</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
@@ -45,6 +53,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     height: '20%',
+  },
+  cancelButton: {
+    backgroundColor: 'red',
+    width: 100,
+    height: 50,
+    padding: 10,
+    borderRadius: 5,
+    margin: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  confirmButton: {
+    backgroundColor: '#39FF14',
+    width: 100,
+    height: 50,
+    padding: 10,
+    borderRadius: 5,
+    margin: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    color: 'gray',
+    fontWeight: 'bold',
+    fontSize: 20,
   },
 });
 
