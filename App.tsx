@@ -28,6 +28,8 @@ import GoogleMapScreen from './components/GoogleMapScreen.js';
 import AmbulanceEnRouteScreen from './components/AmbulanceEnRouteScreen.js';
 import CallReceivedScreen from './components/CallReceivedScreen.js';
 import SummoningConfirmation from './components/SummoningConfirmation.js';
+import GoogleMapDriverRouteScreen from './components/GoogleMapDriverRouteScreen.js';
+import DriverEnRouteScreen from './components/DriverEnRouteScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -89,6 +91,16 @@ function App() {
         <Stack.Screen
           name="CallReceived"
           component={CallReceivedScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="GoogleMapDriverRoute"
+          component={GoogleMapDriverRouteScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="DriverEnRoute"
+          component={DriverEnRouteScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

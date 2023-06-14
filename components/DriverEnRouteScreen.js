@@ -1,19 +1,16 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
 import GoogleMapScreen from './GoogleMapScreen.js';
+import GoogleMapDriverRouteScreen from './GoogleMapDriverRouteScreen.js';
 
-function ShowNearestAmbulanceScreen() {
+function DriverEnRouteScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
-        {/* <Image 
-          style={styles.image}
-          source={require('../images/sampleGmap.jpeg')}
-        />*/}
-        <GoogleMapScreen style={styles.map} />
+        <GoogleMapDriverRouteScreen style={styles.map} />
         <View style={styles.eta}>
           <Text style={styles.text}>Estimated Time Of Arrival: </Text>
-          <Text style={styles.etaText}>7 minutes</Text>
+          <Text style={styles.etaText}>8 minutes</Text>
         </View>
       </View>
     </View>
@@ -58,4 +55,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ShowNearestAmbulanceScreen;
+export default DriverEnRouteScreen;

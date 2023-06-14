@@ -7,8 +7,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import GoogleMapScreen from './GoogleMapScreen.js';
+import { NavigationContainer } from '@react-navigation/native';
+import DriverEnRouteScreen from './DriverEnRouteScreen.js';
 
-function WaitingForCallScreen() {
+
+function WaitingForCallScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.innerView}>
@@ -19,7 +22,7 @@ function WaitingForCallScreen() {
             <TouchableOpacity style={styles.cancelButton} onPress={() => navigation.navigate('SummoningAmbulance')}>
               <Text style={styles.buttonText}>Decline</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.confirmButton} onPress={() => navigation.navigate('ShowNearestAmbulance')}>
+            <TouchableOpacity style={styles.confirmButton} onPress={() => navigation.navigate('DriverEnRoute')}>
               <Text style={styles.buttonText}>Accept</Text>
             </TouchableOpacity>
           </View>
