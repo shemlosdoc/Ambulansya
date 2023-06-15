@@ -6,7 +6,7 @@ import {
   Button,
   TouchableOpacity,
 } from 'react-native';
-import GoogleMapScreen from './GoogleMapScreen.js';
+import DriverGoogleMapScreen from './DriverGoogleMapScreen.js';
 import { NavigationContainer } from '@react-navigation/native';
 import DriverEnRouteScreen from './DriverEnRouteScreen.js';
 
@@ -15,8 +15,10 @@ function WaitingForCallScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.innerView}>
-        <GoogleMapScreen />
+        <DriverGoogleMapScreen />
         <View style={styles.eta}>
+          <Text style={styles.waitingSummongText}>Waiting For Summon</Text>
+          {/*
           <Text style={{fontWeight: 'bold', fontSize: 20 }}>You have been summoned</Text>
           <View style={{flexDirection: 'row'}}>
             <TouchableOpacity style={styles.cancelButton} onPress={() => navigation.navigate('SummoningAmbulance')}>
@@ -26,6 +28,7 @@ function WaitingForCallScreen({ navigation }) {
               <Text style={styles.buttonText}>Accept</Text>
             </TouchableOpacity>
           </View>
+          */}
         </View>
       </View>
     </View>

@@ -3,10 +3,9 @@ import { StyleSheet, View, Text, Platform, Image } from 'react-native';
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
-//import ambulanceIcon from '../images/ambulanceIcon.png';
-import patient from '../images/patient.png';
+import ambulanceIcon from '../images/ambulanceIcon.png';
 
-const GoogleMapScreen = () => {
+const DriverGoogleMapScreen = () => {
   const [location, setLocation] = useState(null);
   const [nearestHospitals, setNearestHospitals] = useState([]);
 
@@ -73,7 +72,7 @@ const GoogleMapScreen = () => {
           <Marker
 	    coordinate={{ latitude: location.latitude, longitude: location.longitude }}
 	  >
-          <Image source={patient} style={styles.markerIcon} />
+          <Image source={ambulanceIcon} style={styles.markerIcon} />
         </Marker>
         </MapView>
       ) : (
@@ -100,4 +99,4 @@ const styles = StyleSheet.create({
 },
 });
 
-export default GoogleMapScreen;
+export default DriverGoogleMapScreen;
