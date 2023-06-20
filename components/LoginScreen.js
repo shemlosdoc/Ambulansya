@@ -77,7 +77,7 @@ function LoginScreen({ navigation }) {
         <Text style={styles.forgotPasswordRedirect}>Forgot your password?</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => navigation.navigate('UserModeSelect')}>
-        <Text style={styles.SignupRedirect}>Sigup</Text>
+        <Text style={styles.SignupRedirect}>Signup</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Login with Google</Text>

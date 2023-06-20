@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, View, Text, Platform, Image } from 'react-native';
-import MapView, { Marker, Polyline, PROVIDER_GOOGLE } from 'react-native-maps';
-import Geolocation from 'react-native-geolocation-service';
-import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
+import { View, Text } from 'react-native';
+import MapView, { Marker, Polyline } from 'react-native-maps';
 import axios from 'axios';
 import { decode } from '@mapbox/polyline';
-import patient from '../images/patient.png';
 
-const GoogleMapScreen = () => {
-  const [location, setLocation] = useState(null);
-  const [nearestHospitals, setNearestHospitals] = useState([]);
+const DirectionGuide = () => {
   const [responseData, setResponseData] = useState(null);
   const [polylinePoints, setPolylinePoints] = useState([]);
   const [mapRegion, setMapRegion] = useState(null);
   const [eta, setEta] = useState(null);
 
   useEffect(() => {
-    const fetchData = async (origin) => {
+    const fetchData = async () => {
       try {
         const response = await axios.get('https://maps.googleapis.com/maps/api/directions/json', {
           params: {
             // ... API parameters
-            origin: origin,
-            //origin: '10.232256997034291, 123.77235892703698',
-            destination: '10.232328952823924, 123.7711317033964',
+            origin: '10.232256997034291, 123.77235892703698',
+            destination: '10.246826980973587, 123.79677775783757',
             //waypoints: 'via:enc:lexeF{~wsZejrPjtye@:',
             mode: 'driving',
             units: 'metric',
@@ -67,81 +61,10 @@ const GoogleMapScreen = () => {
         console.log(error);
       }
     };
-    if (location) {
-      fetchData(`${location.latitude}, ${location.longitude}`);
-    }
-    requestLocationPermission();
+
+    fetchData();
   }, []);
 
-  const requestLocationPermission = async () => {
-    try {
-      const permission =
-        Platform.OS === 'android'
-          ? PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION
-          : PERMISSIONS.IOS.LOCATION_WHEN_IN_USE;
-
-      const result = await check(permission);
-      if (result === RESULTS.DENIED) {
-      // Permission has been denied, show a prompt to request permission again
-      const requestResult = await request(permission);
-        if (requestResult === RESULTS.GRANTED) {
-          // Permission granted, you can now retrieve the user's location
-          getDeviceLocation();
-        } else {
-          console.log('Location permission denied');
-        }
-      } else if (result === RESULTS.GRANTED) {
-        // Permission granted, you can now retrieve the user's location
-        getDeviceLocation();
-      }
-    } catch (error) {
-      console.log('Error requesting location permission:', error);
-    }
-  };
-
-  const getDeviceLocation = () => {
-    Geolocation.getCurrentPosition(
-      (position) => {
-        if (position && position.coords) {
-          const latitude = position.coords.latitude;
-          const longitude = position.coords.longitude;
-          setLocation({ latitude, longitude });
-        } else {
-          console.log('Error: Invalid position object');
-        }
-      },
-      (error) => {
-        console.log('Error getting location:', error);
-      },
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-    );
-  };
-
-  /*
-  return (
-    <View style={styles.container}>
-      {location ? (
-        <MapView
-          style={styles.map}
-          initialRegion={{
-            latitude: location.latitude,
-            longitude: location.longitude,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
-        >
-          <Marker
-	    coordinate={{ latitude: location.latitude, longitude: location.longitude }}
-	  >
-          <Image source={patient} style={styles.markerIcon} />
-        </Marker>
-        </MapView>
-      ) : (
-        <Text>Loading Location...</Text>
-      )}
-    </View>
-  );
-  */
   return (
     <View style={{ flex: 1 }}>
       {responseData ? (
@@ -178,21 +101,4 @@ const GoogleMapScreen = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  map: {
-    width: '100%',
-    height: '100%',
-    ...StyleSheet.absoluteFillObject,
-  },
-  markerIcon: {
-    width: 32,
-    height: 32,
-},
-});
-
-export default GoogleMapScreen;
+export default DirectionGuide;
