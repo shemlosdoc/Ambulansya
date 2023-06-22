@@ -11,10 +11,6 @@ function ShowNearestAmbulanceScreen() {
           source={require('../images/sampleGmap.jpeg')}
         />*/}
         <GoogleMapScreen style={styles.map} />
-        <View style={styles.eta}>
-          <Text style={styles.text}>Estimated Time Of Arrival: </Text>
-          <Text style={styles.etaText}>? minutes</Text>
-        </View>
       </View>
     </View>
   );

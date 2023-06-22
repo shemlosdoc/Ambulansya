@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import database from '@react-native-firebase/database';
+import GoogleMapScreen from './GoogleMapScreen.js';
 
 function SummoningConfirmation({ navigation }) {
 
@@ -38,7 +39,7 @@ function SummoningConfirmation({ navigation }) {
       device: 'mobile'
     });
     */
-    navigation.navigate('ShowNearestAmbulance');
+    navigation.navigate('GoogleMap');
   };
   
 
