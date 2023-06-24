@@ -6,6 +6,7 @@ import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import axios from 'axios';
 import { decode } from '@mapbox/polyline';
 import patient from '../images/patient.png';
+import ambulanceIcon from '../images/ambulanceIcon.png';
 
 const GoogleMapScreen = () => {
   const [location, setLocation] = useState(null);
@@ -23,7 +24,7 @@ const GoogleMapScreen = () => {
             destination: destination,
             mode: 'driving',
             units: 'metric',
-            key: 'YOUR_API_KEY',
+            key: 'AIzaSyAIGunAKRYfaFpQ8ZklwesjJ3KSWCRTv98',
           },
         });
 
@@ -118,9 +119,9 @@ const GoogleMapScreen = () => {
   }, [location]);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       {responseData ? (
-        <View style={{ flex: 1 }}>
+        <View style={styles.innerView}>
           <MapView style={{ flex: 1 }} region={mapRegion}>
             <Polyline coordinates={polylinePoints} strokeWidth={3} strokeColor="red" />
             <Marker
@@ -129,24 +130,18 @@ const GoogleMapScreen = () => {
                 longitude: responseData.routes[0].legs[0].start_location.lng,
               }}
               title="Start"
-            />
+            >
+              <Image source={patient} style={styles.markerIcon} />
+            </Marker>
             <Marker
               coordinate={{
                 latitude: responseData.routes[0].legs[0].end_location.lat,
                 longitude: responseData.routes[0].legs[0].end_location.lng,
               }}
               title="End"
-            />
-            {location && (
-              <Marker
-                coordinate={{
-                  latitude: location.latitude,
-                  longitude: location.longitude,
-                }}
-              >
-                <Image source={patient} style={styles.markerIcon} />
-              </Marker>
-            )}
+            >
+              <Image source={ambulanceIcon} style={styles.markerIcon} />
+            </Marker>
           </MapView>
           <View style={styles.eta}>
             <Text style={styles.etaText}>ETA: {eta}</Text>
@@ -160,6 +155,17 @@ const GoogleMapScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  innerView: {
+    width: '100%',
+    height: '100%',
+    padding: 5,
+  },
   markerIcon: {
     width: 32,
     height: 32,
