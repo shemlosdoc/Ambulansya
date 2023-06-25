@@ -8,11 +8,10 @@ import axios from 'axios';
 import { decode } from '@mapbox/polyline';
 import patient from '../images/patient.png';
 import ambulanceIcon from '../images/ambulanceIcon.png';
-import startIcon from '../images/start.png';
 
 
 
-const DriverGoogleMapScreen = () => {
+const TestGoogleMapScreen = () => {
   const [location, setLocation] = useState(null);
   const [responseData, setResponseData] = useState(null);
   const [polylinePoints, setPolylinePoints] = useState([]);
@@ -25,8 +24,10 @@ const DriverGoogleMapScreen = () => {
       try {
         const response = await axios.get('https://maps.googleapis.com/maps/api/directions/json', {
           params: {
-            origin: origin,
-            destination: destination,
+            //origin: origin,
+            //destination: destination,
+            origin: '10.308228758876744, 123.89212803643649',
+            destination: '10.301674924043727, 123.90116550843993',
             mode: 'driving',
             units: 'metric',
             key: 'AIzaSyAIGunAKRYfaFpQ8ZklwesjJ3KSWCRTv98',
@@ -155,10 +156,6 @@ const DriverGoogleMapScreen = () => {
               <Image source={patient} style={styles.markerIcon} />
             </Marker>
           </MapView>
-          <TouchableOpacity style={styles.startButton}>
-            <Image source={startIcon} style={styles.markerIcon}/>
-            <Text style={{ fontSize: 23 }}>Start</Text>
-          </TouchableOpacity>
           <View style={styles.eta}>
             <Text style={styles.etaText}>ETA: {eta}</Text>
           </View>
@@ -190,10 +187,10 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 4,
     borderRadius: 5,
-    marginTop: 5,
+    marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 5,
+    padding: 10,
     height: '20%',
   },
   etaText: {
@@ -210,17 +207,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 5,
   },
-  startButton: {
-    flexDirection: 'row',
-    backgroundColor: 'gray',
-    padding: 5,
-    margin: 3,
-    justifyContent: 'center',
-    borderColor: 'white',
-    borderWidth: 4,
-    borderRadius: 5,
-  },
 });
 
-export default DriverGoogleMapScreen;
-
+export default TestGoogleMapScreen;

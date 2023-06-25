@@ -123,7 +123,7 @@ const GoogleMapScreen = () => {
       {responseData ? (
         <View style={styles.innerView}>
           <MapView style={{ flex: 1 }} region={mapRegion}>
-            <Polyline coordinates={polylinePoints} strokeWidth={3} strokeColor="red" />
+            <Polyline coordinates={polylinePoints} strokeWidth={4} strokeColor="blue" />
             <Marker
               coordinate={{
                 latitude: responseData.routes[0].legs[0].start_location.lat,
