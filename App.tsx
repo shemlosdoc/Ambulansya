@@ -40,7 +40,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="DriverGoogleMap">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen
             name="TestGoogleMap"
             component={TestGoogleMapScreen}

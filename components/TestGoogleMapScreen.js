@@ -26,8 +26,8 @@ const TestGoogleMapScreen = () => {
           params: {
             //origin: origin,
             //destination: destination,
-            origin: '10.308228758876744, 123.89212803643649',
-            destination: '10.301674924043727, 123.90116550843993',
+            origin: '10.232306870384573, 123.77137710021022',
+            destination: '10.244182973771645, 123.79669907443778',
             mode: 'driving',
             units: 'metric',
             key: 'AIzaSyAIGunAKRYfaFpQ8ZklwesjJ3KSWCRTv98',

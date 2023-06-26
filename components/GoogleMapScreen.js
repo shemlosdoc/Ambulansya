@@ -113,7 +113,7 @@ const GoogleMapScreen = () => {
     };
 
     if (location) {
-      fetchData(`${location.latitude},${location.longitude}`, '10.30812320220457,123.8922460536254');
+      fetchData(`${location.latitude},${location.longitude}`, '10.228856375282712, 123.76756777916351');
     }
     requestLocationPermission();
   }, [location]);
