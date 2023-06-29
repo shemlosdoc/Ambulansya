@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, Platform, Image, Linking, TouchableOpacity } from 'react-native';
 import MapView, { Marker, Polyline } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
-import { Directions } from 'react-native-google-maps-directions';
+import { getDirections } from 'react-native-google-maps-directions';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 import axios from 'axios';
 import { decode } from '@mapbox/polyline';
 import patient from '../images/patient.png';
 import ambulanceIcon from '../images/ambulanceIcon.png';
 import startIcon from '../images/start.png';
-
-
 
 const DriverGoogleMapScreen = () => {
   const [location, setLocation] = useState(null);
@@ -20,7 +18,6 @@ const DriverGoogleMapScreen = () => {
   const [eta, setEta] = useState(null);
 
   useEffect(() => {
-    
     const fetchData = async (origin, destination) => {
       try {
         const response = await axios.get('https://maps.googleapis.com/maps/api/directions/json', {
@@ -55,8 +52,6 @@ const DriverGoogleMapScreen = () => {
             longitude: Math.min(startLocation.lng, endLocation.lng),
           };
 
-
-
           setMapRegion({
             latitude: (northeast.latitude + southwest.latitude) / 2,
             longitude: (northeast.longitude + southwest.longitude) / 2,
@@ -79,12 +74,24 @@ const DriverGoogleMapScreen = () => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         setLocation({ latitude, longitude });
+
+        if (mapRegion) {
+          const { latitude, longitude } = mapRegion;
+          const camera = {
+            center: {
+              latitude,
+              longitude,
+            },
+            pitch: 0,
+            heading: position.coords.heading || 0,
+            zoom: 18,
+          };
+          mapRef.current.animateCamera(camera, { duration: 1000 });
+        }
       } else {
         console.log('Error: Invalid position object');
       }
     };
-
-
 
     const requestLocationPermission = async () => {
       try {
@@ -122,19 +129,18 @@ const DriverGoogleMapScreen = () => {
     };
 
     if (location) {
-      fetchData('10.228856375282712, 123.76756777916351', `${location.latitude},${location.longitude}`);
+      fetchData(`${location.latitude}, ${location.longitude}`, '10.245207407055927, 123.79596735052833');
     }
     requestLocationPermission();
   }, [location]);
 
-
-
+  const mapRef = React.createRef();
 
   return (
     <View style={styles.container}>
       {responseData ? (
         <View style={styles.innerView}>
-          <MapView style={{ flex: 1 }} region={mapRegion}>
+          <MapView ref={mapRef} style={{ flex: 1 }} region={mapRegion} mapType="hybrid">
             <Polyline coordinates={polylinePoints} strokeWidth={4} strokeColor="blue" />
             <Marker
               coordinate={{
@@ -156,7 +162,7 @@ const DriverGoogleMapScreen = () => {
             </Marker>
           </MapView>
           <TouchableOpacity style={styles.startButton}>
-            <Image source={startIcon} style={styles.markerIcon}/>
+            <Image source={startIcon} style={styles.markerIcon} />
             <Text style={{ fontSize: 23 }}>Start</Text>
           </TouchableOpacity>
           <View style={styles.eta}>
@@ -194,7 +200,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 5,
-    height: '20%',
+    height: '10%',
   },
   etaText: {
     fontSize: 25,
@@ -223,4 +229,3 @@ const styles = StyleSheet.create({
 });
 
 export default DriverGoogleMapScreen;
-

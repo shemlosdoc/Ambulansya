@@ -1,0 +1,309 @@
+> Task :react-native-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :react-native-gradle-plugin:compileJava NO-SOURCE
+> Task :react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :react-native-gradle-plugin:processResources UP-TO-DATE
+> Task :react-native-gradle-plugin:classes UP-TO-DATE
+> Task :react-native-gradle-plugin:inspectClassesForKotlinIC UP-TO-DATE
+> Task :react-native-gradle-plugin:jar UP-TO-DATE
+
+> Configure project :react-native-firebase
+react-native-firebase: using React Native prebuilt binary from /home/shem/Thesis/Ambulansya/node_modules/react-native/android
+
+> Configure project :react-native-firebase_app
+:react-native-firebase_app package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/app/package.json
+:react-native-firebase_app:firebase.bom using default value: 32.1.0
+:react-native-firebase_app:play.play-services-auth using default value: 20.5.0
+:react-native-firebase_app package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/app/package.json
+:react-native-firebase_app:version set from package.json: 18.1.0 (18,1,0 - 18001000)
+:react-native-firebase_app:android.compileSdk using custom value: 33
+:react-native-firebase_app:android.targetSdk using custom value: 33
+:react-native-firebase_app:android.minSdk using custom value: 21
+:react-native-firebase_app:reactNativeAndroidDir /home/shem/Thesis/Ambulansya/node_modules/react-native/android
+
+> Configure project :react-native-firebase_auth
+:react-native-firebase_auth package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/auth/package.json
+:react-native-firebase_app package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/app/package.json
+:react-native-firebase_auth:firebase.bom using default value: 32.1.0
+:react-native-firebase_auth package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/auth/package.json
+:react-native-firebase_auth:version set from package.json: 18.0.0 (18,0,0 - 18000000)
+:react-native-firebase_auth:android.compileSdk using custom value: 33
+:react-native-firebase_auth:android.targetSdk using custom value: 33
+:react-native-firebase_auth:android.minSdk using custom value: 21
+:react-native-firebase_auth:reactNativeAndroidDir /home/shem/Thesis/Ambulansya/node_modules/react-native/android
+
+> Configure project :react-native-firebase_database
+:react-native-firebase_database package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/database/package.json
+:react-native-firebase_app package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/app/package.json
+:react-native-firebase_database:firebase.bom using default value: 32.1.0
+:react-native-firebase_database package.json found at /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/database/package.json
+:react-native-firebase_database:version set from package.json: 18.1.0 (18,1,0 - 18001000)
+:react-native-firebase_database:android.compileSdk using custom value: 33
+:react-native-firebase_database:android.targetSdk using custom value: 33
+:react-native-firebase_database:android.minSdk using custom value: 21
+:react-native-firebase_database:reactNativeAndroidDir /home/shem/Thesis/Ambulansya/node_modules/react-native/android
+
+> Task :app:buildCodegenCLI SKIPPED
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:generatePackageList
+> Task :app:preBuild
+> Task :app:preDebugBuild
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :react-native-community_geolocation:preBuild UP-TO-DATE
+> Task :react-native-community_geolocation:preDebugBuild UP-TO-DATE
+> Task :react-native-community_geolocation:compileDebugAidl NO-SOURCE
+> Task :react-native-firebase:preBuild UP-TO-DATE
+> Task :react-native-firebase:preDebugBuild UP-TO-DATE
+> Task :react-native-firebase:compileDebugAidl NO-SOURCE
+> Task :react-native-firebase_app:preBuild UP-TO-DATE
+> Task :react-native-firebase_app:preDebugBuild UP-TO-DATE
+> Task :react-native-firebase_app:compileDebugAidl NO-SOURCE
+> Task :react-native-firebase_auth:preBuild UP-TO-DATE
+> Task :react-native-firebase_auth:preDebugBuild UP-TO-DATE
+> Task :react-native-firebase_auth:compileDebugAidl NO-SOURCE
+> Task :react-native-firebase_database:preBuild UP-TO-DATE
+> Task :react-native-firebase_database:preDebugBuild UP-TO-DATE
+> Task :react-native-firebase_database:compileDebugAidl NO-SOURCE
+> Task :react-native-geolocation-service:preBuild UP-TO-DATE
+> Task :react-native-geolocation-service:preDebugBuild UP-TO-DATE
+> Task :react-native-geolocation-service:compileDebugAidl NO-SOURCE
+> Task :react-native-maps:preBuild UP-TO-DATE
+> Task :react-native-maps:preDebugBuild UP-TO-DATE
+> Task :react-native-maps:compileDebugAidl NO-SOURCE
+> Task :react-native-permissions:preBuild UP-TO-DATE
+> Task :react-native-permissions:preDebugBuild UP-TO-DATE
+> Task :react-native-permissions:compileDebugAidl NO-SOURCE
+> Task :react-native-push-notification:preBuild UP-TO-DATE
+> Task :react-native-push-notification:preDebugBuild UP-TO-DATE
+> Task :react-native-push-notification:compileDebugAidl NO-SOURCE
+> Task :react-native-safe-area-context:preBuild UP-TO-DATE
+> Task :react-native-safe-area-context:preDebugBuild UP-TO-DATE
+> Task :react-native-safe-area-context:compileDebugAidl NO-SOURCE
+> Task :react-native-screens:preBuild UP-TO-DATE
+> Task :react-native-screens:preDebugBuild UP-TO-DATE
+> Task :react-native-screens:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :react-native-community_geolocation:packageDebugRenderscript NO-SOURCE
+> Task :react-native-firebase:packageDebugRenderscript NO-SOURCE
+> Task :react-native-firebase_app:packageDebugRenderscript NO-SOURCE
+> Task :react-native-firebase_auth:packageDebugRenderscript NO-SOURCE
+> Task :react-native-firebase_database:packageDebugRenderscript NO-SOURCE
+> Task :react-native-geolocation-service:packageDebugRenderscript NO-SOURCE
+> Task :react-native-maps:packageDebugRenderscript NO-SOURCE
+> Task :react-native-permissions:packageDebugRenderscript NO-SOURCE
+> Task :react-native-push-notification:packageDebugRenderscript NO-SOURCE
+> Task :react-native-safe-area-context:packageDebugRenderscript NO-SOURCE
+> Task :react-native-screens:packageDebugRenderscript NO-SOURCE
+> Task :app:compileDebugRenderscript NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :app:javaPreCompileDebug
+> Task :react-native-community_geolocation:writeDebugAarMetadata
+> Task :react-native-firebase:writeDebugAarMetadata
+> Task :react-native-firebase_app:writeDebugAarMetadata
+> Task :react-native-firebase_auth:writeDebugAarMetadata
+> Task :react-native-firebase_database:writeDebugAarMetadata
+> Task :react-native-geolocation-service:writeDebugAarMetadata
+> Task :react-native-maps:writeDebugAarMetadata
+> Task :react-native-permissions:writeDebugAarMetadata
+> Task :react-native-push-notification:writeDebugAarMetadata
+> Task :react-native-safe-area-context:writeDebugAarMetadata
+> Task :react-native-screens:writeDebugAarMetadata
+> Task :app:generateDebugResValues
+> Task :app:processDebugGoogleServices
+> Task :react-native-community_geolocation:compileDebugRenderscript NO-SOURCE
+> Task :react-native-community_geolocation:generateDebugResValues
+> Task :react-native-community_geolocation:generateDebugResources
+> Task :react-native-community_geolocation:packageDebugResources
+> Task :react-native-firebase:compileDebugRenderscript NO-SOURCE
+> Task :react-native-firebase:generateDebugResValues
+> Task :react-native-firebase:generateDebugResources
+> Task :react-native-firebase:packageDebugResources
+> Task :react-native-firebase_app:compileDebugRenderscript NO-SOURCE
+> Task :react-native-firebase_app:generateDebugResValues
+> Task :react-native-firebase_app:generateDebugResources
+> Task :react-native-firebase_app:packageDebugResources
+> Task :react-native-firebase_auth:compileDebugRenderscript NO-SOURCE
+> Task :react-native-firebase_auth:generateDebugResValues
+> Task :react-native-firebase_auth:generateDebugResources
+> Task :react-native-firebase_auth:packageDebugResources
+> Task :react-native-firebase_database:compileDebugRenderscript NO-SOURCE
+> Task :react-native-firebase_database:generateDebugResValues
+> Task :react-native-firebase_database:generateDebugResources
+> Task :react-native-firebase_database:packageDebugResources
+> Task :react-native-geolocation-service:compileDebugRenderscript NO-SOURCE
+> Task :react-native-geolocation-service:generateDebugResValues
+> Task :react-native-geolocation-service:generateDebugResources
+> Task :react-native-geolocation-service:packageDebugResources
+> Task :react-native-maps:compileDebugRenderscript NO-SOURCE
+> Task :react-native-maps:generateDebugResValues
+> Task :react-native-maps:generateDebugResources
+> Task :react-native-maps:packageDebugResources
+> Task :react-native-permissions:compileDebugRenderscript NO-SOURCE
+> Task :react-native-permissions:generateDebugResValues
+> Task :react-native-permissions:generateDebugResources
+> Task :react-native-permissions:packageDebugResources
+> Task :react-native-push-notification:compileDebugRenderscript NO-SOURCE
+> Task :react-native-push-notification:generateDebugResValues
+> Task :react-native-push-notification:generateDebugResources
+> Task :react-native-push-notification:packageDebugResources
+> Task :react-native-safe-area-context:compileDebugRenderscript NO-SOURCE
+> Task :react-native-safe-area-context:generateDebugResValues
+> Task :react-native-safe-area-context:generateDebugResources
+> Task :react-native-safe-area-context:packageDebugResources
+> Task :react-native-screens:compileDebugRenderscript NO-SOURCE
+> Task :react-native-screens:generateDebugResValues
+> Task :react-native-screens:generateDebugResources
+> Task :react-native-screens:packageDebugResources
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :react-native-community_geolocation:extractDeepLinksDebug
+
+> Task :react-native-community_geolocation:processDebugManifest
+package="com.reactnativecommunity.geolocation" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/@react-native-community/geolocation/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-firebase:extractDeepLinksDebug
+
+> Task :react-native-firebase:processDebugManifest
+package="io.invertase.firebase" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-firebase/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-firebase_app:extractDeepLinksDebug
+
+> Task :react-native-firebase_app:processDebugManifest
+package="io.invertase.firebase" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/app/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-firebase_auth:extractDeepLinksDebug
+
+> Task :react-native-firebase_auth:processDebugManifest
+package="io.invertase.firebase.auth" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/auth/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-firebase_database:extractDeepLinksDebug
+
+> Task :react-native-firebase_database:processDebugManifest
+package="io.invertase.firebase.database" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/database/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :app:mergeDebugResources
+> Task :react-native-geolocation-service:extractDeepLinksDebug
+> Task :react-native-maps:extractDeepLinksDebug
+
+> Task :react-native-maps:processDebugManifest
+package="com.rnmaps.maps" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-maps/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-geolocation-service:processDebugManifest
+package="com.agontuk.RNFusedLocation" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-geolocation-service/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-permissions:extractDeepLinksDebug
+> Task :react-native-push-notification:extractDeepLinksDebug
+
+> Task :react-native-permissions:processDebugManifest
+package="com.zoontek.rnpermissions" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-permissions/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-safe-area-context:extractDeepLinksDebug
+
+> Task :react-native-push-notification:processDebugManifest
+package="com.dieam.reactnativepushnotification" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-push-notification/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-screens:extractDeepLinksDebug
+
+> Task :react-native-safe-area-context:processDebugManifest
+package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-screens:processDebugManifest
+package="com.swmansion.rnscreens" found in source AndroidManifest.xml: /home/shem/Thesis/Ambulansya/node_modules/react-native-screens/android/src/main/AndroidManifest.xml.
+Setting the namespace via a source AndroidManifest.xml's package attribute is deprecated.
+Please instead set the namespace (or testNamespace) in the module's build.gradle file, as described here: https://developer.android.com/studio/build/configure-app-module#set-namespace
+This migration can be done automatically using the AGP Upgrade Assistant, please refer to https://developer.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :react-native-community_geolocation:compileDebugLibraryResources
+
+> Task :app:processDebugMainManifest
+[:react-native-firebase_app] /home/shem/Thesis/Ambulansya/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml Warning:
+	Namespace 'io.invertase.firebase' used in: :react-native-firebase_app, :react-native-firebase.
+
+> Task :app:processDebugManifest
+> Task :react-native-community_geolocation:parseDebugLocalResources
+> Task :app:processDebugManifestForPackage
+> Task :react-native-firebase:compileDebugLibraryResources
+> Task :react-native-firebase:parseDebugLocalResources
+> Task :react-native-community_geolocation:generateDebugRFile
+> Task :react-native-firebase:generateDebugRFile
+> Task :react-native-firebase_app:compileDebugLibraryResources
+> Task :react-native-firebase_app:parseDebugLocalResources
+> Task :react-native-firebase_auth:compileDebugLibraryResources
+> Task :react-native-firebase_auth:parseDebugLocalResources
+> Task :react-native-firebase_database:compileDebugLibraryResources
+> Task :react-native-firebase_database:parseDebugLocalResources
+> Task :react-native-geolocation-service:compileDebugLibraryResources
+> Task :react-native-geolocation-service:parseDebugLocalResources
+> Task :react-native-firebase_app:generateDebugRFile
+> Task :react-native-geolocation-service:generateDebugRFile
+> Task :react-native-firebase_auth:generateDebugRFile
+> Task :react-native-maps:compileDebugLibraryResources
+> Task :react-native-maps:parseDebugLocalResources
+> Task :react-native-firebase_database:generateDebugRFile
+> Task :react-native-permissions:compileDebugLibraryResources
+> Task :react-native-permissions:parseDebugLocalResources
+> Task :react-native-maps:generateDebugRFile
+> Task :react-native-push-notification:compileDebugLibraryResources
+> Task :react-native-push-notification:parseDebugLocalResources
+> Task :react-native-permissions:generateDebugRFile
+> Task :react-native-safe-area-context:compileDebugLibraryResources
+> Task :react-native-safe-area-context:parseDebugLocalResources
+> Task :react-native-push-notification:generateDebugRFile
+> Task :react-native-safe-area-context:generateDebugRFile
+> Task :react-native-screens:parseDebugLocalResources
+> Task :react-native-screens:compileDebugLibraryResources
+> Task :react-native-community_geolocation:generateDebugBuildConfig
+> Task :react-native-community_geolocation:javaPreCompileDebug
+> Task :react-native-screens:generateDebugRFile
+
+> Task :react-native-community_geolocation:compileDebugJavaWithJavac
+
+> Task :react-native-community_geolocation:bundleLibCompileToJarDebug
+> Task :react-native-firebase:generateDebugBuildConfig
+> Task :react-native-firebase:javaPreCompileDebug
+
+> Task :react-native-firebase:compileDebugJavaWithJavac
+
+> Task :react-native-firebase:compileDebugJavaWithJavac FAILED
+> Task :app:processDebugResources
+ReactNativeFirebase WARNING: NPM package '@react-native-firebase/auth' depends on '@react-native-firebase/app' v18.0.0 but found v18.1.0, this might cause build issues or runtime crashes.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+See https://docs.gradle.org/7.5.1/userguide/command_line_interface.html#sec:command_line_warnings
+114 actionable tasks: 109 executed, 5 up-to-date
