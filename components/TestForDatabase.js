@@ -10,7 +10,7 @@ import patient from '../images/patient.png';
 import ambulanceIcon from '../images/ambulanceIcon.png';
 import startIcon from '../images/start.png';
 
-const DriverGoogleMapScreen = () => {
+const TestForDatabase = () => {
   const [location, setLocation] = useState(null);
   const [responseData, setResponseData] = useState(null);
   const [polylinePoints, setPolylinePoints] = useState([]);
@@ -229,4 +229,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DriverGoogleMapScreen;
+export default TestForDatabase;
