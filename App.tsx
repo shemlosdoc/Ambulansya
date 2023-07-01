@@ -33,7 +33,8 @@ import GoogleMapDriverRouteScreen from './components/GoogleMapDriverRouteScreen.
 import DriverEnRouteScreen from './components/DriverEnRouteScreen.js';
 import DirectionGuide from './components/DirectionGuide.js';
 import TestGoogleMapScreen from './components/TestGoogleMapScreen.js';
-import TestForDatabase from './components/TestForDatabase.js';
+import EmergencyDetailScreen from './components/EmergencyDetailScreen.js';
+import UserProfilePage from './components/UserProfilePage.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -41,10 +42,15 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TestForDatabase">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen
-            name="TestForDatabase"
-            component={TestForDatabase}
+            name="UserProfile"
+            component={UserProfilePage}
+            options={{ headerShown: false }}
+        />
+        <Stack.Screen
+            name="EmergencyDetail"
+            component={EmergencyDetailScreen}
             options={{ headerShown: false }}
         />
         <Stack.Screen

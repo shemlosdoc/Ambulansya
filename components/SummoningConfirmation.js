@@ -10,7 +10,7 @@ import GoogleMapScreen from './GoogleMapScreen.js';
 function SummoningConfirmation({ navigation }) {
 
   const handleClick = () => {
-    navigation.navigate('GoogleMap');
+    navigation.navigate('EmergencyDetail');
   };
   
 

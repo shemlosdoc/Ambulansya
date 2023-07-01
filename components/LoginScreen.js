@@ -40,7 +40,7 @@ function LoginScreen({ navigation }) {
           const uid = await getUserUID();
           console.log(uid);
           if (uid === 'n3l9FXhDdmXZFuy38oFNPfW4qqq1') {
-            navigation.navigate('DriverGoogleMap');
+            navigation.navigate('UserProfile');
           } else {
             navigation.navigate('SummoningAmbulance');
           }
