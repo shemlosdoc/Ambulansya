@@ -10,7 +10,7 @@ const fetchData = async (origin, destination) => {
             destination: destination,
             mode: 'driving',
             units: 'metric',
-            key: 'AIzaSyAIGunAKRYfaFpQ8ZklwesjJ3KSWCRTv98',
+            key: 'YOUR_API_KEY',
           },
         });
 
@@ -71,21 +71,6 @@ const handleLocationUpdate = (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         setLocation({ latitude, longitude });
-
-        /*if (mapRegion) {
-          const { latitude, longitude } = mapRegion;
-          const camera = {
-            center: {
-              latitude,
-              longitude,
-            },
-            pitch: 0,
-            heading: position.coords.heading || 0,
-            zoom: 18,
-          };
-          mapRef.current.animateCamera(camera, { duration: 1000 });
-        }
-        */
       } else {
         console.log('Error: Invalid position object');
       }
@@ -97,7 +82,6 @@ This function is responsible for handling location updates. It takes the positio
 1. The function receives a `position` object.
 2. If the `position` object is valid and contains `coords` data, it extracts the latitude and longitude coordinates.
 3. The latitude and longitude coordinates are set in the `location` state variable.
-4. There is a commented-out section related to updating the map camera based on the location update.
 
 ### Function: requestLocationPermission()
 ```
