@@ -8,16 +8,19 @@ function DriverSignUpScreen({ navigation }) {
     const [middleName, setMiddleName] = useState('');
     const [lastName, setLastName] = useState('');
     const [companyName, setCompanyName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const { colors } = useTheme();
 
-  const handleLogin = () => {
-    console.log('First Name:', firstName);
-    console.log('Middle Name:', middleName);
-    console.log('Last Name:', lastName);
-    console.log('Company:', companyName);
-    console.log('Email:', email);
-    console.log('Password:', password);
+  const handleSignUp = async () => {
+    try {
+      const response = await auth().createUserWithEmailAndPassword(email, password);
+      console.log('User signed up successfully!', response.user);
+      navigation.navigate('WaitingForCall');
+      // You can navigate to another screen or perform other actions here after successful signup.
+    } catch (error) {
+      console.error('Error signing up: ', error);
+    }
   };
 
   return (
@@ -60,7 +63,7 @@ function DriverSignUpScreen({ navigation }) {
         onChangeText={setPassword}
         value={password}
       />
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('WaitingForCall')} >
+      <TouchableOpacity style={styles.button} onPress={handleSignUp} >
         <Text style={styles.buttonText}>Driver Sign Up</Text>
       </TouchableOpacity>
     </View>

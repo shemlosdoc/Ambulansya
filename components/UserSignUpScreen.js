@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import AmbulansyaBanner from './AmbulansyaBanner.js';
+import { useTheme } from 'react-native-paper';
+import auth from '@react-native-firebase/auth';
 
 function UserSignUpScreen({ navigation }) {
   const [firstName, setFirstName] = useState('');
@@ -9,13 +11,17 @@ function UserSignUpScreen({ navigation }) {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { colors } = useTheme();
 
-  const handleLogin = () => {
-    console.log('First Name:', firstName);
-    console.log('Middle Name:', middleName);
-    console.log('Last Name:', lastName);
-    console.log('Email:', email);
-    console.log('Password:', password);
+  const handleSignUp = async () => {
+    try {
+      const response = await auth().createUserWithEmailAndPassword(email, password);
+      console.log('User signed up successfully!', response.user);
+      navigation.navigate('SummoningAmbulance');
+      // You can navigate to another screen or perform other actions here after successful signup.
+    } catch (error) {
+      console.error('Error signing up: ', error);
+    }
   };
 
   return (
@@ -52,7 +58,7 @@ function UserSignUpScreen({ navigation }) {
         onChangeText={setPassword}
         value={password}
       />
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SummoningAmbulance')}>
+      <TouchableOpacity style={styles.button} onPress={handleSignUp}>
         <Text style={styles.buttonText}>User Sign Up</Text>
       </TouchableOpacity>
     </View>
